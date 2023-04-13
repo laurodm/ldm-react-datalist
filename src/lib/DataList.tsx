@@ -5,14 +5,8 @@ import DataListPagination from "./DatalistPagination";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
 import { IApiService, TDataParser } from "./types";
+import { TDatalistColumn } from "./types/TDatalistColumn";
 import "./DataList.css";
-
-export type TDatalistColumn = {
-  title?: string;
-  data?: string;
-  noOrder?: boolean;
-  render?: (tableData: any) => any;
-};
 
 export type TDataListOrder = {
   orderParam: string | null;
