@@ -4324,5 +4324,6 @@ const jo = xa(
   return /* @__PURE__ */ H(jo.Provider, { value: { reloadList: me }, children: ne() });
 };
 export {
-  Mo as DataList
+  Mo as DataList,
+  jo as DatalistContext
 };
