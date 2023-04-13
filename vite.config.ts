@@ -14,7 +14,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/lib/index.ts"),
-      name: "@ldm-react/datalist",
+      name: "@ldm-react-datalist",
       formats: ["es", "umd"],
       fileName: (format) => `ldm-react-datalist.${format}.js`,
     },
