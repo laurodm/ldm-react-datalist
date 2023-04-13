@@ -1,4 +1,4 @@
-import { TListPagedParams } from "ldm-react-datalist";
+import { TListPagedParams } from "../../dist";
 import { HttpClient, IApiService } from "../apiServices";
 import { AxiosHttpClient } from "../infra";
 
