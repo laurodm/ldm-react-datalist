@@ -1,4 +1,4 @@
-(function(Ie,ae){typeof exports=="object"&&typeof module<"u"?ae(exports,require("react")):typeof define=="function"&&define.amd?define(["exports","react"],ae):(Ie=typeof globalThis<"u"?globalThis:Ie||self,ae(Ie["@ldm-react/datalist"]={},Ie.React))})(this,function(Ie,ae){"use strict";var Ke={},ea={get exports(){return Ke},set exports(e){Ke=e}},Je={};/**
+(function(Ie,ae){typeof exports=="object"&&typeof module<"u"?ae(exports,require("react")):typeof define=="function"&&define.amd?define(["exports","react"],ae):(Ie=typeof globalThis<"u"?globalThis:Ie||self,ae(Ie["ldm-react-datalist"]={},Ie.React))})(this,function(Ie,ae){"use strict";var Ke={},ea={get exports(){return Ke},set exports(e){Ke=e}},Je={};/**
  * @license React
  * react-jsx-runtime.production.min.js
  *
