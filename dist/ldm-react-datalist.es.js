@@ -4165,7 +4165,7 @@ const No = ({
 }) => {
   const f = Math.round(t / n);
   function l(y) {
-    return y === e ? "active" : "";
+    return y === e ? "datalist-pagination-button-active" : "";
   }
   function u(y) {
     y.preventDefault(), s({ page: parseInt(y.target.id), ...r, query: i });
@@ -4195,7 +4195,7 @@ const No = ({
         onclick: c
       }
     }, { rule: x, label: A, text: C, onclick: v } = P[y];
-    return x ? /* @__PURE__ */ H("li", { className: "disabled", children: /* @__PURE__ */ H("span", { "aria-hidden": "true", children: C }) }) : /* @__PURE__ */ H("li", { children: /* @__PURE__ */ H("a", { href: "#", "aria-label": A, onClick: v, children: C }) });
+    return x ? /* @__PURE__ */ H("li", { className: "datalist-pagination-button-disabled", children: /* @__PURE__ */ H("span", { "aria-hidden": "true", children: C }) }) : /* @__PURE__ */ H("li", { className: "datalist-pagination-button", children: /* @__PURE__ */ H("a", { href: "#", "aria-label": A, onClick: v, children: C }) });
   }
   function k() {
     const y = [], P = f - 4;
@@ -4205,7 +4205,7 @@ const No = ({
   }
   function _() {
     const y = k() || [];
-    return !f || f <= 0 ? /* @__PURE__ */ H(Pe, {}) : y.map((P, x) => P === "..." ? /* @__PURE__ */ H("li", { className: "disabled", children: /* @__PURE__ */ H("a", { href: "#", children: "..." }) }, x) : /* @__PURE__ */ H("li", { className: `${l(P)}`, children: /* @__PURE__ */ H("a", { href: "#", id: P, onClick: u, children: P }) }, x));
+    return !f || f <= 0 ? /* @__PURE__ */ H(Pe, {}) : y.map((P, x) => P === "..." ? /* @__PURE__ */ H("li", { className: "datalist-pagination-button-disabled", children: /* @__PURE__ */ H("a", { href: "#", children: "..." }) }, x) : /* @__PURE__ */ H("li", { className: `${l(P)}`, children: /* @__PURE__ */ H("a", { href: "#", id: P, onClick: u, children: P }) }, x));
   }
   function S() {
     return t <= 0 || t < n ? /* @__PURE__ */ H(Pe, {}) : /* @__PURE__ */ De("div", { className: "datalist-pagination-wrapper", children: [
@@ -4224,8 +4224,7 @@ const No = ({
     ] });
   }
   return /* @__PURE__ */ H(Pe, { children: S() });
-};
-const jo = xa(
+}, jo = xa(
   {}
 ), Mo = ({
   columns: e,
@@ -4303,9 +4302,9 @@ const jo = xa(
   function ne() {
     return k && (!c || c.length <= 0) ? /* @__PURE__ */ H(Pe, { children: "Não há ítens a serem exibidos." }) : /* @__PURE__ */ De("div", { className: "datalist", children: [
       ie(),
-      /* @__PURE__ */ De("table", { className: i, children: [
-        /* @__PURE__ */ H("thead", { children: /* @__PURE__ */ H("tr", { children: A() }) }),
-        /* @__PURE__ */ H("tbody", { children: ee() })
+      /* @__PURE__ */ De("table", { className: "datalist-table", children: [
+        /* @__PURE__ */ H("thead", { className: "datalist-thead", children: /* @__PURE__ */ H("tr", { className: "datalist-tr", children: A() }) }),
+        /* @__PURE__ */ H("tbody", { className: "datalist-tbody", children: ee() })
       ] }),
       /* @__PURE__ */ H(
         No,
