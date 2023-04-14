@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRotate } from "@fortawesome/free-solid-svg-icons";
 import { IApiService, TDataParser } from "./types";
 import { TDatalistColumn } from "./types/TDatalistColumn";
-import "./DataList.css";
 
 export type TDataListOrder = {
   orderParam: string | null;
@@ -143,11 +142,11 @@ const DataList: React.FC<TProps> = ({
     return (
       <div className="datalist">
         {renderLoading()}
-        <table className={className}>
-          <thead>
-            <tr>{renderColumnsTitle()}</tr>
+        <table className="datalist-table">
+          <thead className="datalist-thead">
+            <tr className="datalist-tr">{renderColumnsTitle()}</tr>
           </thead>
-          <tbody>{renderTableBody()}</tbody>
+          <tbody className="datalist-tbody">{renderTableBody()}</tbody>
         </table>
         <DataListPagination
           defaultPage={defaultPage}

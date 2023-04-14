@@ -24,7 +24,7 @@ const DataListPagination: React.FC<TProps> = ({
   const totalPages = Math.round(totalItens / pageLimit);
 
   function setDefault(itemId: number): string {
-    if (itemId === defaultPage) return "active";
+    if (itemId === defaultPage) return "datalist-pagination-button-active";
     return "";
   }
 
@@ -63,12 +63,12 @@ const DataListPagination: React.FC<TProps> = ({
     const { rule, label, text, onclick } = typeRules[type];
     if (rule)
       return (
-        <li className="disabled">
+        <li className="datalist-pagination-button-disabled">
           <span aria-hidden="true">{text}</span>
         </li>
       );
     return (
-      <li>
+      <li className="datalist-pagination-button">
         <a href="#" aria-label={label} onClick={onclick}>
           {text}
         </a>
@@ -108,7 +108,7 @@ const DataListPagination: React.FC<TProps> = ({
     return pageBtns.map((btn, index) => {
       if (btn === "...") {
         return (
-          <li className="disabled" key={index}>
+          <li className="datalist-pagination-button-disabled" key={index}>
             <a href="#">...</a>
           </li>
         );
